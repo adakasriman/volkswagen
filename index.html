@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Volkswagen</title>
+</head>
+
+<body>
+    <div class="volksContainer">
+        <!-- Header with image -->
+        <header class="banner-container">
+            <div id="carousel" class="carousel">
+                <div class="slides">
+                    <div class="slide" data-state="active">
+                        <img class="carview" src="./img/NoPath@1X.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="carview" src="./img/NoPath@1X.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="carview" src="./img/NoPath@1X.png" alt="">
+                    </div>
+                </div>
+                <div class="indicators">
+                    <label>
+                        <input class="indicator" name="indicator" data-slide="1" data-state="active" checked
+                            type="radio" />
+                    </label>
+                    <label>
+                        <input class="indicator" name="indicator" data-slide="2" type="radio" />
+                    </label>
+                    <label>
+                        <input class="indicator" name="indicator" data-slide="3" type="radio" />
+                    </label>
+                </div>
+            </div>
+
+        </header>
+        <section class="lease-section">
+            <div class="lease-caluclate">
+                <h1 class="header"><span class="text">Calculate </span>your lease</h1>
+                <p>Drive around in a Volkswagen without hampering your budget. With Volkswagen Power Leasing Service,
+                    you can now enjoy owning a Volkswagen car with low rentals charges and zero down payment. Calculate
+                    your lease amount today by filling the
+                    form below.</p>
+            </div>
+            <hr>
+            <div class="choose-vehicle">
+                <div class="header">Choose your city and your preferred
+                    Volkswagen</label>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label class="select" for="slct">
+                            <select id="slct-city" required="required">
+
+                            </select>
+
+                            <span id="arrow" class="arrow">
+                                <img src="./IMG/Path 1@1X.png" alt="">
+                            </span>
+                        </label>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="selecting-carModels">
+                            <p class="text">Select the Volkswagen you wish to lease:</p>
+                            <div class="models">
+                                <div class="noOf-models">
+                                    <div id="firstModels" class="tab-content">
+                                        <div class="car-models">
+                                            <label class="carModel">
+                                                <input type="radio" name="test" value="small" checked required>
+                                                <img class="carview" src="./img/Cars-165x93_0002_T-Roc-Model-1@1X.png"
+                                                    alt="">
+                                                <p>New T-Roc</p>
+                                            </label>
+                                            <label class="carModel">
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0000_Volkswagen-Model-Polo@1X.png" alt="">
+                                                <p class="middle-car">New Tiguan Allspace</p>
+                                            </label>
+                                            <label class="carModel">
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0003_Tiguan-AllSpace-Model-1@1X.png" alt="">
+                                                <p>Polo</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="secondModels" class="tab-content">
+                                        <div class="car-models">
+                                            <label>
+                                                <input type="radio" name="test" value="small" checked required>
+                                                <img class="carview" src="./img/Cars-165x93_0002_T-Roc-Model-1@1X.png"
+                                                    alt="">
+                                                <p>New T-Roc</p>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0000_Volkswagen-Model-Polo@1X.png" alt="">
+                                                <p class="middle-car">New Tiguan Allspace</p>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0003_Tiguan-AllSpace-Model-1@1X.png" alt="">
+                                                <p>Polo</p>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div id="thirdModels" class="tab-content">
+                                        <div class="car-models">
+                                            <label>
+                                                <input type="radio" name="test" value="small" checked required>
+                                                <img class="carview" src="./img/Cars-165x93_0002_T-Roc-Model-1@1X.png"
+                                                    alt="">
+                                                <p>New T-Roc</p>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0000_Volkswagen-Model-Polo@1X.png" alt="">
+                                                <p class="middle-car">New Tiguan Allspace</p>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="test" value="small" required>
+                                                <img class="carview"
+                                                    src="./img/Cars-165x93_0003_Tiguan-AllSpace-Model-1@1X.png" alt="">
+                                                <p>Polo</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-tab">
+                                    <button class="links active" onclick="selectCar(event, 'firstModels')"></button>
+                                    <button class="links" onclick="selectCar(event, 'secondModels')"></button>
+                                    <button class="links" onclick="selectCar(event, 'thirdModels')"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="select" for="slct">
+                            <select id="slct-tenure" required="required">
+                                <option value="" disabled selected>Tenure</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+
+                            <span id="arrow" class="arrow">
+                                <img src="./IMG/Path 1@1X.png" alt="">
+                            </span>
+                        </label>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="select" for="slct">
+                            <select id="slct-mileage" required="required">
+                                <option value="" disabled selected>Milege</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+
+                            </select>
+
+                            <span id="arrow" class="arrow">
+                                <img src="./IMG/Path 1@1X.png" alt="">
+                            </span>
+                        </label>
+
+                    </div>
+                    <div class="form-group emi-scheme">
+                        <div class="row">
+
+                            <div class="scheme-selecting">
+                                <div class="btnNameInfo">
+                                    <label class="scheme-checkBox">EMI Scheme:
+
+                                    </label>
+                                </div>
+                                <div class="scheme-types">
+                                    <div class="btnNameInfo">
+                                        <label>
+                                            <input type="radio" name="radio" checked />
+                                            <span>Wet lease</span>
+                                            <i class="fas fa-info"></i>
+
+                                        </label>
+                                        <!-- <div class="tooltip">
+                                            <span class="tooltiptext">Leasing Rental will cover All Repairs ,
+                                                Maintenance , Insurance
+                                                will be covered . Fuel and toll be borne by customer.</span>
+                                        </div> -->
+                                    </div>
+                                    <div class="btnNameInfo">
+                                        <label>
+                                            <input type="radio" name="radio" checked />
+                                            <span>Dry lease</span>
+                                            <i class="fas fa-info"></i>
+                                        </label>
+
+                                        <!-- <div class="tooltip">
+                                            <span class="tooltiptext">Leasing Rental will cover All Repairs , Maintenance , Insurance
+                                                will be covered . Fuel and toll be borne by customer.</span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="scheme-selecting">
+                                <div class="btnNameInfo">
+                                    <label class="scheme-checkBox">Registration Type:
+
+                                    </label>
+                                </div>
+                                <div class="scheme-types">
+                                    <div class="btnNameInfo">
+                                        <label>
+                                            <input type="radio" name="type" checked required />
+                                            <span>Corporate</span>
+                                        </label>
+                                    </div>
+                                    <div class="btnNameInfo">
+                                        <label>
+                                            <input type="radio" name="type" required />
+                                            <span class="individual-type">Individual</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="submit-btn" type="submit" onclick="validate()">Submit</button>
+                    </div>
+                </form>
+        </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

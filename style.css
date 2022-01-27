@@ -1,0 +1,607 @@
+.volksContainer {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 100px;
+}
+
+.volksContainer .banner-container .carousel {
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+.volksContainer .banner-container .carousel .slides {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.volksContainer .banner-container .carousel .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 3em;
+  color: white;
+  line-height: 400px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 1000ms;
+  transition: opacity 1000ms;
+}
+
+.volksContainer .banner-container .carousel .slide img {
+  height: 100%;
+  width: 100%;
+}
+
+.volksContainer .banner-container .carousel .slide:nth-child(1) {
+  background-color: red;
+  opacity: 1;
+}
+
+.volksContainer .banner-container .carousel .slide:nth-child(2) {
+  background-color: green;
+}
+
+.volksContainer .banner-container .carousel .slide:nth-child(3) {
+  background-color: blue;
+}
+
+.volksContainer .banner-container .carousel .slide[data-state="active"] {
+  display: block;
+}
+
+.volksContainer .banner-container .indicators {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.volksContainer .banner-container .indicators label {
+  margin: 0 10px;
+}
+
+.volksContainer .banner-container .indicators .indicator {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin: 0;
+  color: #ffffff;
+  width: 2.15em;
+  height: 2.15em;
+  border: 0.15em solid #00b0f0;
+  border-radius: 50%;
+  -webkit-transform: translateY(-0.075em);
+          transform: translateY(-0.075em);
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.volksContainer .banner-container .indicators .indicator[data-state="active"] {
+  background-color: #00b0f0;
+}
+
+.volksContainer .banner-container .indicators .indicator:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #00b0f0;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.volksContainer .lease-section {
+  width: 70%;
+  margin: auto;
+}
+
+.volksContainer .lease-section .lease-caluclate {
+  margin: 60px 0 20px 0;
+}
+
+.volksContainer .lease-section .lease-caluclate .header {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .lease-section .lease-caluclate .header {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .lease-section .lease-caluclate .header {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .volksContainer .lease-section .lease-caluclate .header {
+    font-size: 40px;
+  }
+}
+
+.volksContainer .lease-section .lease-caluclate .header .text {
+  font-weight: bold;
+}
+
+.volksContainer .lease-section .lease-caluclate p {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .lease-section .lease-caluclate p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .lease-section .lease-caluclate p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .volksContainer .lease-section .lease-caluclate p {
+    font-size: 20px;
+  }
+}
+
+.volksContainer .lease-section .choose-vehicle .header {
+  font-size: 30px;
+  color: #0d0d0d;
+  font-weight: bold;
+  margin: 31px 0 15px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .lease-section .choose-vehicle .header {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .lease-section .choose-vehicle .header {
+    font-size: 23px;
+  }
+}
+
+.volksContainer .lease-section .choose-vehicle .select {
+  position: relative;
+  min-width: 200px;
+  width: 100%;
+}
+
+.volksContainer .lease-section .choose-vehicle .select .arrow {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 3px);
+  width: 10px;
+  height: 6px;
+  stroke-width: 2px;
+  stroke: #9098a9;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.volksContainer .lease-section .choose-vehicle .select select {
+  -webkit-appearance: none;
+  padding: 7px 40px 7px 12px;
+  margin: 31px 0 25px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+.volksContainer .lease-section .choose-vehicle .select select:required:invalid {
+  color: #5a667f;
+}
+
+.volksContainer .lease-section .choose-vehicle .select select option[value=""][disabled] {
+  display: none;
+}
+
+.volksContainer .lease-section .choose-vehicle .select select:focus {
+  outline: none;
+  border-color: #07f;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.volksContainer .lease-section .choose-vehicle .select select:hover + .arrow {
+  stroke: #07f;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels {
+  margin-top: 30px;
+  /* Style the tab content */
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .text {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .text {
+    font-size: 28px;
+  }
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .models {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .car-models {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .button-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .button-tab button.active {
+  background: #00b0f0;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .button-tab .links {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 0.5px solid #00b0f0;
+  background: none;
+  margin-top: -80px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .button-tab .links::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-color: #00b0f0;
+  content: "";
+  position: relative;
+  top: 2px;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content#firstModels {
+  display: block;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content .car-models .middle-car {
+  margin-top: 12px;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content input[type="radio"] + img {
+  cursor: pointer;
+}
+
+.volksContainer .lease-section .choose-vehicle .selecting-carModels .tab-content input[type="radio"]:checked + img {
+  outline: 2px solid #64ca64;
+}
+
+.volksContainer .emi-scheme {
+  margin-top: 105px;
+}
+
+.volksContainer .emi-scheme .row {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .emi-scheme .row {
+    width: 300px;
+  }
+}
+
+.volksContainer .emi-scheme .text {
+  font-size: 30px;
+}
+
+.volksContainer .emi-scheme .scheme-selecting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .emi-scheme .scheme-selecting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.volksContainer .emi-scheme .scheme-selecting .scheme-checkBox {
+  width: 150px;
+}
+
+.volksContainer .emi-scheme .scheme-selecting .scheme-types {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .emi-scheme .scheme-selecting .scheme-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .emi-scheme .scheme-selecting .scheme-types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+}
+
+.volksContainer .emi-scheme .scheme-selecting label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label input {
+  position: absolute;
+  left: -9999px;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label input:checked + span:before {
+  -webkit-box-shadow: inset 0 0 0 0.4375em #00b0f0;
+          box-shadow: inset 0 0 0 0.4375em #00b0f0;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  width: 100px;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label span:before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  -webkit-box-shadow: inset 0 0 0 0.125em #00b0f0;
+          box-shadow: inset 0 0 0 0.125em #00b0f0;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label .tooltip {
+  position: relative;
+}
+
+.volksContainer .emi-scheme .scheme-selecting label .tooltip .tooltipText {
+  position: relative;
+  top: -20px;
+}
+
+.volksContainer .submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 100px;
+  border-radius: 50px;
+  margin: auto;
+  border: none;
+  font-size: 24px;
+  color: #ffffff;
+  background: #001e50;
+}
+
+@media screen and (max-width: 1024px) {
+  .volksContainer .submit-btn {
+    padding: 13px 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .volksContainer .submit-btn {
+    padding: 10px 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .volksContainer .submit-btn {
+    padding: 10px 100px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
