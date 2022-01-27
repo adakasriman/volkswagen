@@ -1,0 +1,394 @@
+.volksContainer {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 100px;
+    .banner-container {
+        // height: 700px;
+        .carousel {
+            position: relative;
+            height: 700px;
+            width: 100%;
+            .slides {
+                height: 100%;
+                width: 100%;
+                position: relative;
+            }
+            .slide {
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                font-size: 3em;
+                color: white;
+                line-height: 400px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1000ms;
+                &:nth-child(1) {
+                    background-color: red;
+                    opacity: 1;
+                }
+                &:nth-child(2) {
+                    background-color: green;
+                }
+                &:nth-child(3) {
+                    background-color: blue;
+                }
+            }
+            .slide[data-state="active"] {
+                display: block;
+            }
+        }
+        .indicators {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            left: 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            label {
+                margin: 0 10px;
+            }
+            .indicator {
+                &[data-state="active"] {
+                    background-color: #00b0f0;
+                }
+                display: none;
+                -webkit-appearance: none;
+                appearance: none;
+                margin: 0;
+                color: #ffffff;
+                width: 2.15em;
+                height: 2.15em;
+                border: 0.15em solid #00b0f0;
+                border-radius: 50%;
+                transform: translateY(-0.075em);
+                display: grid;
+                place-content: center;
+                position: relative;
+                &:checked::before {
+                    transform: scale(1);
+                    background-color: #00b0f0;
+                    content: "";
+                    height: 15px;
+                    width: 15px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .lease-section {
+        width: 70%;
+        margin: auto;
+        .lease-caluclate {
+            margin: 60px 0 20px 0;
+            .header {
+                @media screen and (max-width: 480px) {
+                    font-size: 32px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 35px;
+                }
+                @media screen and (max-width: 1024px) {
+                    font-size: 40px;
+                }
+                font-size: 48px;
+                font-weight: normal;
+                margin-bottom: 23px;
+                .text {
+                    font-weight: bold;
+                }
+            }
+            p {
+                @media screen and (max-width: 480px) {
+                    font-size: 15px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 15px;
+                }
+                @media screen and (max-width: 1024px) {
+                    font-size: 20px;
+                }
+                font-size: 26px;
+            }
+        }
+        .choose-vehicle {
+            .header {
+                @media screen and (max-width: 480px) {
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 768px) {
+                    font-size: 23px;
+                }
+                font-size: 30px;
+                color: #0d0d0d;
+                font-weight: bold;
+                margin: 31px 0 15px 0;
+            }
+            .select {
+                position: relative;
+                min-width: 200px;
+                width: 100%;
+                .arrow {
+                    position: absolute;
+                    right: 12px;
+                    top: calc(50% - 3px);
+                    width: 10px;
+                    height: 6px;
+                    stroke-width: 2px;
+                    stroke: #9098a9;
+                    fill: none;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    pointer-events: none;
+                }
+                select {
+                    -webkit-appearance: none;
+                    padding: 7px 40px 7px 12px;
+                    margin: 31px 0 25px 0;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #e8eaed;
+                    border-radius: 5px;
+                    background: #fff;
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 16px;
+                    transition: all 150ms ease;
+                }
+                select:required:invalid {
+                    color: #5a667f;
+                }
+                select option[value=""][disabled] {
+                    display: none;
+                }
+                select:focus {
+                    outline: none;
+                    border-color: #07f;
+                    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+                }
+                select:hover + .arrow {
+                    stroke: #07f;
+                }
+            }
+            .selecting-carModels {
+                margin-top: 30px;
+                .text {
+                    @media screen and (max-width: 480px) {
+                        font-size: 20px;
+                    }
+                    @media screen and (max-width: 768px) {
+                        font-size: 24px;
+                    }
+                    @media screen and (max-width: 1024px) {
+                        font-size: 28px;
+                    }
+                    font-size: 30px;
+                    margin-bottom: 60px;
+                }
+                .models {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 40px;
+                    margin-bottom: 30px;
+                }
+                .car-models {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                }
+                .button-tab {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    button.active {
+                        background: #00b0f0;
+                    }
+                    .links {
+                        width: 31px;
+                        height: 31px;
+                        border-radius: 50%;
+                        border: 0.5px solid #00b0f0;
+                        background: none;
+                        margin-top: -80px;
+                        &::before {
+                            transform: scale(1);
+                            background-color: #00b0f0;
+                            content: "";
+                            position: relative;
+                            top: 2px;
+                            height: 15px;
+                            width: 15px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            display: inline-block;
+                        }
+                    }
+                }
+                /* Style the tab content */
+                .tab-content {
+                    display: none;
+                    padding: 6px 12px;
+                    border: none;
+                    &#firstModels {
+                        display: block;
+                    }
+                    .car-models {
+                        @media screen and (max-width: 1024px) {
+                            display: flex;
+                            align-items: center;
+                            gap: 60px;
+                        }
+                        @media screen and (max-width: 768px) {
+                            display: flex;
+                            // flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                        }
+                        @media screen and (max-width: 480px) {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                        }
+                        display: flex;
+                        gap: 60px;
+
+                        p {
+                            text-align: center;
+                            margin-top: 20px;
+                            font-size: 15px;
+                        }
+                        .middle-car {
+                            margin-top: 12px;
+                        }
+                    }
+                    input[type="radio"] {
+                        position: absolute;
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                    }
+                    input[type="radio"] + img {
+                        cursor: pointer;
+                    }
+                    input[type="radio"]:checked + img {
+                        outline: 2px solid rgb(100, 202, 100);
+                    }
+                }
+            }
+        }
+    }
+    .emi-scheme {
+        margin-top: 105px;
+        .row {
+            @media screen and (max-width: 480px) {
+                width: 300px;
+            }
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        .text {
+            font-size: 30px;
+        }
+        .scheme-selecting {
+            @media screen and (max-width: 768px) {
+                display: flex;
+                align-items: center;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .scheme-checkBox {
+                width: 150px;
+            }
+            .scheme-types {
+                @media screen and (max-width: 480px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                }
+                width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            label {
+                // width: 130px;
+                display: flex;
+                cursor: pointer;
+                font-weight: 500;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 0.375em;
+                input {
+                    position: absolute;
+                    left: -9999px;
+                    &:checked + span {
+                        &:before {
+                            box-shadow: inset 0 0 0 0.4375em #00b0f0;
+                        }
+                    }
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.375em 0.75em 0.375em 0.375em;
+                    border-radius: 99em; // or something higher...
+                    transition: 0.25s ease;
+                    width: 100px;
+                    &:before {
+                        display: flex;
+                        flex-shrink: 0;
+                        content: "";
+                        background-color: #fff;
+                        width: 1.5em;
+                        height: 1.5em;
+                        border-radius: 50%;
+                        margin-right: 0.375em;
+                        transition: 0.25s ease;
+                        box-shadow: inset 0 0 0 0.125em #00b0f0;
+                    }
+                }
+            }
+        }
+    }
+    .submit-btn {
+        @media screen and (max-width: 1024px) {
+            padding: 13px 100px;
+        }
+        @media screen and (max-width: 768px) {
+            padding: 10px 100px;
+        }
+        @media screen and (max-width: 480px) {
+            padding: 10px 100px;
+        }
+        display: flex;
+        padding: 15px 100px;
+        border-radius: 50px;
+        margin: auto;
+        border: none;
+        font-size: 24px;
+        color: #ffffff;
+        background: #001e50;
+    }
+}
